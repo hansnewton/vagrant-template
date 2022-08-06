@@ -1,0 +1,16 @@
+---
+- name: manager
+  box: bento/centos-7
+  hostname: manager
+  ipaddress: 192.168.57.20
+  memory: 1024
+  cpus: 1
+  provision: provision/shell/manager.sh
+
+- name: node01
+  box: bento/centos-7
+  hostname: node01
+  ipaddress: 192.168.57.21
+  memory: 1024
+  cpus: 1
+  provision: provision/shell/worker.sh
